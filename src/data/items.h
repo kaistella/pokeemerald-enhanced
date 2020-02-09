@@ -4884,4 +4884,16 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 0,
     },
+
+    [ITEM_STRANGE_SOUVENIR] =
+    {
+        .name = _("STR. SOUVENIR"),
+        .itemId = ITEM_STRANGE_SOUVENIR,
+        .price = 0,
+        .description = sStrangeSouvenirDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 1,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
 };

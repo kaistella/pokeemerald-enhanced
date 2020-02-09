@@ -293,6 +293,8 @@
 #define EVO_LEVEL_RAIN       0x001B // Pokémon reaches the specified level while it's raining
 #define EVO_SPECIFIC_MON_IN_PARTY  0x001C // Pokémon levels up with a specified Pokémon in party
 #define EVO_LEVEL_SPECIFIC_MON_TYPE_IN_PARTY  0x001D // Pokémon reaches the specified level with a specified Pokémon in party
+#define EVO_ITEM_ALOLA       0x001F // specified item is used on Pokémon while holding a Strange Souvenir
+#define EVO_LEVEL_NIGHT_ALOLA 0x0020 // Pokémon reaches the specified level, is night, holding Strange Souvenir
 
 #define EVOS_PER_MON 8
 
