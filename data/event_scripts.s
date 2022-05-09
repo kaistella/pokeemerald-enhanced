@@ -955,6 +955,9 @@ gText_LegendaryFlewAway::
 	.include "data/text/questionnaire.inc"
 	.include "data/text/abnormal_weather.inc"
 
+gText_RanFromStaticPokemon::
+	.string "You decided you battle the {STR_VAR_1} later.$"
+
 EventScript_SelectWithoutRegisteredItem::
 	msgbox gText_SelectWithoutRegisteredItem, MSGBOX_SIGN
 	end
@@ -998,6 +1001,14 @@ Common_EventScript_LegendaryFlewAway::
 	fadescreenswapbuffers FADE_FROM_BLACK
 	bufferspeciesname STR_VAR_1, VAR_0x8004
 	msgbox gText_LegendaryFlewAway, MSGBOX_DEFAULT
+	release
+	end
+
+Common_EventScript_RanFromStaticPokemon::
+	fadescreenswapbuffers FADE_TO_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
+	bufferspeciesname STR_VAR_1, VAR_0x8004
+	msgbox gText_RanFromStaticPokemon, MSGBOX_DEFAULT
 	release
 	end
 
@@ -1056,3 +1067,11 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/text/frontier_brain.inc"
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
+
+	.include "data/maps/Underwater103/scripts.inc"
+
+	.include "data/maps/UnifiedCave/scripts.inc"
+
+	.include "data/maps/Underwater_UnifiedCave/scripts.inc"
+
+	.include "data/maps/UnifiedCave_Entrance/scripts.inc"

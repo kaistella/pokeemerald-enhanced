@@ -4410,6 +4410,46 @@
       "secondary_tileset": "gTileset_MysteryEventsHouse",
       "border_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/border.bin",
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNDERWATER103",
+      "name": "Underwater103_Layout",
+      "width": 80,
+      "height": 22,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/Underwater103/border.bin",
+      "blockdata_filepath": "data/layouts/Underwater103/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNIFIED_CAVE",
+      "name": "UnifiedCave_Layout",
+      "width": 17,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/UnifiedCave/border.bin",
+      "blockdata_filepath": "data/layouts/UnifiedCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNDERWATER_UNIFIED_CAVE",
+      "name": "Underwater_UnifiedCave_Layout",
+      "width": 20,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Underwater",
+      "border_filepath": "data/layouts/Underwater_UnifiedCave/border.bin",
+      "blockdata_filepath": "data/layouts/Underwater_UnifiedCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNIFIED_CAVE_ENTRANCE",
+      "name": "UnifiedCave_Entrance_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/UnifiedCave_Entrance/border.bin",
+      "blockdata_filepath": "data/layouts/UnifiedCave_Entrance/map.bin"
     }
   ]
 }

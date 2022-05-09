@@ -95,6 +95,8 @@ Route118_EventScript_StevenTrigger::
 	waitmovement 0
 	delay 30
 	msgbox Route118_Text_StevenQuestions, MSGBOX_DEFAULT
+	giveitem ITEM_EXP_SHARE
+	msgbox Route118_Text_StevenGiveRing, MSGBOX_DEFAULT
 	closemessage
 	call_if_eq VAR_0x8008, 0, Route118_EventScript_StevenExit0
 	call_if_eq VAR_0x8008, 1, Route118_EventScript_StevenExit1
@@ -259,6 +261,12 @@ Route118_Text_StevenQuestions:
 	.string "As a TRAINER of POKéMON,\n"
 	.string "what do you think?\p"
 	.string "Of course, it's not any of my business.\p"
+	.string "Before we part, take this.$"
+
+Route118_Text_StevenGiveRing:
+	.string "With that MEGA RING, you can achieve\n"
+	.string "MEGA EVOLUTION when a POKéMON capable\n"
+	.string "of it is holding its MEGA STONE.\p"
 	.string "It would be nice if we were to meet\n"
 	.string "again somewhere.$"
 

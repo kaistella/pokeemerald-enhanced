@@ -76,8 +76,13 @@ Route121_SafariZoneEntrance_EventScript_TryEnterSafariZone::
 	special EnterSafariMode
 	setvar VAR_SAFARI_ZONE_STATE, 2
 	clearflag FLAG_GOOD_LUCK_SAFARI_ZONE
+	call_if_unset FLAG_HIDE_SAFARI_ZONE_SOUTH_CONSTRUCTION_WORKERS, Route121_SafariZoneEntrance_EventScript_ClearConstructionWorkers
 	warp MAP_SAFARI_ZONE_SOUTH, 32, 33
 	waitstate
+	end
+
+Route121_SafariZoneEntrance_EventScript_ClearConstructionWorkers::
+	setflag FLAG_HIDE_SAFARI_ZONE_SOUTH_CONSTRUCTION_WORKERS
 	end
 
 Route121_SafariZoneEntrance_EventScript_CheckHasRoomForPokemon::

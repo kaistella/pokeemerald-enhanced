@@ -603,11 +603,11 @@ Route110_TrickHousePuzzle8_EventScript_ItemBeadMail::
 	end
 
 VictoryRoad_1F_EventScript_ItemMaxElixir::
-	finditem ITEM_MAX_ELIXIR
+	finditem ITEM_MEGA_RING
 	end
 
 VictoryRoad_1F_EventScript_ItemPPUp::
-	finditem ITEM_PP_UP
+	finditem ITEM_BLAZIKENITE
 	end
 
 VictoryRoad_B1F_EventScript_ItemTM29::
@@ -615,7 +615,7 @@ VictoryRoad_B1F_EventScript_ItemTM29::
 	end
 
 VictoryRoad_B1F_EventScript_ItemFullRestore::
-	finditem ITEM_FULL_RESTORE
+	finditem ITEM_MAWILITE
 	end
 
 VictoryRoad_B2F_EventScript_ItemFullHeal::
@@ -656,4 +656,64 @@ MagmaHideout_4F_EventScript_ItemMaxRevive::
 
 MagmaHideout_3F_3R_EventScript_ItemEscapeRope::
 	finditem ITEM_ESCAPE_ROPE
+	end
+
+SootopolisCity_EventScript_ItemMegaRing::
+	finditem ITEM_MEGA_RING
+	end
+
+GraniteCave_B2F_EventScript_ItemAggronite::
+	finditem ITEM_AGGRONITE
+	end
+
+Route115_EventScript_ItemAlakazite::
+	finditem ITEM_ALAKAZITE
+	end
+	
+Route114_EventScript_ItemAltarianite::
+	finditem ITEM_ALTARIANITE
+	end
+	
+Route121_EventScript_ItemAmpharosite::
+	finditem ITEM_AMPHAROSITE
+	end
+	
+MtPyre_3F_EventScript_ItemBanettite::
+	finditem ITEM_BANETTITE
+	end
+	
+Route114_EventScript_ItemAbsolite::
+	finditem ITEM_ABSOLITE
+	end
+	
+Route102_EventScript_ItemGalladite::
+	finditem ITEM_GALLADITE
+	end
+	
+Route131_EventScript_ItemAerodactylite::
+	finditem ITEM_AERODACTYLITE
+	end
+	
+MagmaHideout_4F_EventScript_ItemCameruptite::
+	finditem ITEM_CAMERUPTITE
+	end
+	
+PetalburgCity_EventScript_ItemGardevoirite::	
+	finditem ITEM_GARDEVOIRITE
+	end
+	
+ShoalCave_LowTideIceRoom_EventScript_Glalitite::	
+	finditem ITEM_GLALITITE
+	end
+	
+EverGrandeCity_EventScript_Gyaradosite::
+	finditem ITEM_GYARADOSITE
+	end
+	
+SafariZone_North_EventScript_ItemHeracronite::
+	finditem ITEM_HERACRONITE
+	end
+
+SafariZone_Northeast_EventScript_ItemKangaskhanite::
+	finditem ITEM_KANGASKHANITE
 	end

@@ -96,7 +96,7 @@
 #define FLAG_RESCUED_BIRCH                       0x52
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS           0x53
 
-#define FLAG_UNUSED_0x054                    0x54  // Unused Flag
+#define FLAG_HIDE_ROUTE123_SNORLAX                    0x54  // Unused Flag
 #define FLAG_UNUSED_0x055                    0x55  // Unused Flag
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
@@ -505,13 +505,13 @@
 #define FLAG_ENABLE_TATE_AND_LIZA_MATCH_CALL 0x1D8
 #define FLAG_ENABLE_JUAN_MATCH_CALL          0x1D9
 
-#define FLAG_UNUSED_0x1DA                    0x1DA // Unused Flag
+#define FLAG_DEFEATED_SNORLAX                0x1DA // Custom Flag
 
 #define FLAG_SHOWN_MYSTIC_TICKET             0x1DB
 #define FLAG_DEFEATED_HO_OH                  0x1DC
 #define FLAG_DEFEATED_LUGIA                  0x1DD
 
-#define FLAG_UNUSED_0x1DE                    0x1DE // Unused Flag
+#define FLAG_UNUSED_0x1DE	                 0x1DE // Unused Flag
 #define FLAG_UNUSED_0x1DF                    0x1DF // Unused Flag
 #define FLAG_UNUSED_0x1E0                    0x1E0 // Unused Flag
 #define FLAG_UNUSED_0x1E1                    0x1E1 // Unused Flag
@@ -1217,22 +1217,22 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-#define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
-#define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
-#define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
-#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
-#define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
-#define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
-#define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
-#define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
-#define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
-#define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
-#define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
-#define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
-#define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
-#define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
-#define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
-#define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
+#define FLAG_ITEM_SOOTOPOLIS_CITY_MEGA_RING            				0x493 // Custom Flag
+#define FLAG_ITEM_GRANITE_CAVE_B2F_AGGRONITE                        0x494 // Custom Flag
+#define FLAG_ITEM_ROUTE_115_ALAKAZITE                               0x495 // Custom Flag
+#define FLAG_ITEM_ROUTE_114_ALTARIANITE                             0x496 // Custom Flag
+#define FLAG_ITEM_ROUTE_121_AMPHAROSITE                             0x497 // Custom Flag
+#define FLAG_ITEM_MT_PYRE_3F_BANETTITE                              0x498 // Custom Flag
+#define FLAG_ITEM_ROUTE_120_ABSOLITE                                0x499 // Custom Flag
+#define FLAG_ITEM_ROUTE_102_GALLADITE                               0x49A // Custom Flag
+#define FLAG_ITEM_ROUTE_131_AERODACTYLITE                           0x49B // Custom Flag
+#define FLAG_ITEM_MAGMA_HIDEOUT_4F_CAMERUPTITE                      0x49C // Custom Flag
+#define FLAG_ITEM_PETALBURG_CITY_GARDEVOIRITE                       0x49D // Custom Flag
+#define FLAG_ITEM_SHOAL_CAVE_ICE_ROOM_GLALITITE                     0x49E // Custom Flag
+#define FLAG_ITEM_EVER_GRANDE_CITY_GYARADOSITE                      0x49F // Custom Flag
+#define FLAG_ITEM_SAFARI_ZONE_NORTH_HERACRONITE                     0x4A0 // Custom Flag
+#define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_KANGASKHANITE              0x4A1 // Custom Flag
+#define FLAG_UNUSED_0x4A2		                                    0x4A2 // Unused Flag
 #define FLAG_UNUSED_0x4A3                                           0x4A3 // Unused Flag
 #define FLAG_UNUSED_0x4A4                                           0x4A4 // Unused Flag
 #define FLAG_UNUSED_0x4A5                                           0x4A5 // Unused Flag
