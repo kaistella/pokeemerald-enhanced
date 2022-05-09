@@ -4695,9 +4695,9 @@ static void CreateTypeIconSprites(void)
 // u32 value is re-used, but passed as a bool that's TRUE if national dex is enabled
 static void PrintMonInfo(u32 num, u32 value, u32 owned, u32 newEntry)
 {
-    u8 str[0x10];
-    u8 str2[0x30];
-    u16 natNum;
+    u8 str[16];
+    u8 str2[32];
+    u16 species;
     const u8 *name;
     const u8 *category;
     const u8 *description;
