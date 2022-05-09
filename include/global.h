@@ -15,6 +15,7 @@
 #include "constants/pokemon.h"
 #include "constants/easy_chat.h"
 #include "constants/expansion_branches.h"
+#include "constants/trainer_hill.h"
 
 // Prevent cross-jump optimization.
 #define BLOCK_CROSS_JUMP asm("");
@@ -282,8 +283,6 @@ struct BattleTowerPokemon
     u8 nickname[POKEMON_NAME_LENGTH + 1];
     u8 friendship;
 };
-
-#define NULL_BATTLE_TOWER_POKEMON { .nickname = __("$$$$$$$$$$$") }
 
 struct EmeraldBattleTowerRecord
 {
@@ -570,18 +569,24 @@ struct Roamer
 {
     /*0x00*/ u32 ivs;
     /*0x04*/ u32 personality;
-    /*0x08*/ u16 species;
-    /*0x0A*/ u16 hp;
+    /*0x08*/ u16 species:11; // up to 2047 different species
+    /*0x09*/ u16 respawnMode:2; // 4 respawn modes
+    /*0x09*/ u16 daysToRespawn:3; // up to 7 days
+    /*0x0A*/ u16 damage; //track damage instead of HP to handle scaling roamers
     /*0x0C*/ u8 level;
     /*0x0D*/ u8 status;
-    /*0x0E*/ u8 cool;
-    /*0x0F*/ u8 beauty;
-    /*0x10*/ u8 cute;
-    /*0x11*/ u8 smart;
-    /*0x12*/ u8 tough;
-    /*0x13*/ bool8 active;
-    /*0x14*/ u8 filler[0x8];
-};
+    /*0x0E*/ bool8 active:1; // 1 bit for TRUE or FALSE 
+    /*0x0E*/ bool8 isTerrestrial:1;
+    /*0x0E*/ bool8 doesNotFlee:1;
+    /*0x0E*/ bool8 isStalker:1;
+    /*0x0E*/ bool8 levelScaling:1;
+    /*0x0E*/ bool8 unused:3;
+    /*0x0F*/ u8 locationMapGroup;
+    /*0x10*/ u8 locationMapNum;
+    /*0x11*/ u8 mapGroupHistory[3];
+    /*0x14*/ u8 mapNumHistory[3];
+    /*0x17*/ u8 padding;
+}; /*size = 0x18*/
 
 struct RamScriptData
 {
@@ -812,7 +817,7 @@ struct TrainerNameRecord
     u8 trainerName[PLAYER_NAME_LENGTH + 1];
 };
 
-struct SaveTrainerHill
+struct TrainerHillSave
 {
     /*0x3D64*/ u32 timer;
     /*0x3D68*/ u32 bestTime;
@@ -824,7 +829,7 @@ struct SaveTrainerHill
     /*0x3D6E*/ u16 hasLost:1;
     /*0x3D6E*/ u16 maybeECardScanDuringChallenge:1;
     /*0x3D6E*/ u16 field_3D6E_0f:1;
-    /*0x3D6E*/ u16 tag:2;
+    /*0x3D6E*/ u16 mode:2; // HILL_MODE_*
 };
 
 struct WonderNewsMetadata
@@ -1003,7 +1008,7 @@ struct SaveBlock1
     /*0x31A8*/ u8 giftRibbons[GIFT_RIBBONS_COUNT];
     /*0x31B3*/ struct ExternalEventData externalEventData;
     /*0x31C7*/ struct ExternalEventFlags externalEventFlags;
-    /*0x31DC*/ struct Roamer roamer;
+    /*0x31DC*/ struct Roamer roamer[ROAMER_COUNT];
     /*0x31F8*/ struct EnigmaBerry enigmaBerry;
     /*0x322C*/ struct MysteryGiftSave mysteryGift;
     /*0x3???*/ u8 dexSeen[NUM_DEX_FLAG_BYTES];
