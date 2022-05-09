@@ -332,12 +332,12 @@ void CreateRoamerMonInstance(u8 index)
         
         ROAMER(index)->level = max(max(min(GetHighestLevelInPlayerParty() + SCALING_LEVEL_MODIFIER, SCALED_LEVEL_CAP), MIN_LEVEL), ROAMER(index)->level);
         CreateMonWithIVsPersonality(mon, ROAMER(index)->species, ROAMER(index)->level, ROAMER(index)->ivs, ROAMER(index)->personality);
-        evoSpecies = GetEvolutionTargetSpecies(mon, EVO_MODE_NORMAL, 0);
+        evoSpecies = GetEvolutionTargetSpecies(mon, EVO_MODE_NORMAL, 0, SPECIES_NONE);
         while (evoSpecies != SPECIES_NONE)
         {
             ROAMER(index)->species = evoSpecies;
             CreateMonWithIVsPersonality(mon, evoSpecies, ROAMER(index)->level, ROAMER(index)->ivs, ROAMER(index)->personality);
-            evoSpecies = GetEvolutionTargetSpecies(mon, EVO_MODE_NORMAL, 0);
+            evoSpecies = GetEvolutionTargetSpecies(mon, EVO_MODE_NORMAL, 0, SPECIES_NONE);
         }
     }
     else
