@@ -3792,3 +3792,9 @@ static const u8 sSapphireDesc[] = _(
     "A brilliant blue gem\n"
     "that symbolizes\n"
     "honesty.");
+
+// Surfboard
+static const u8 sSurfboardDesc[] = _(
+	"This flat board\n"
+    "is shaped for\n"
+    "riding waves.");
