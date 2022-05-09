@@ -16,6 +16,8 @@
 #include "event_scripts.h"
 #include "fieldmap.h"
 #include "field_effect.h"
+#include "constants/field_effects.h"
+#include "region_map.h"
 #include "field_player_avatar.h"
 #include "field_screen_effect.h"
 #include "field_weather.h"
@@ -801,6 +803,14 @@ void ItemUseOutOfBattle_TMHM(u8 taskId)
         DisplayItemMessage(taskId, FONT_NORMAL, gText_BootedUpTM, BootUpSoundTMHM); // TM
 }
 
+void ItemUseOutOfBattle_Shears(u8 taskId)
+{
+    if (gSpecialVar_ItemId >= ITEM_HM01_CUT)
+        DisplayItemMessage(taskId, FONT_NORMAL, gText_BootedUpHM, BootUpSoundTMHM); // HM
+    else
+        DisplayItemMessage(taskId, FONT_NORMAL, gText_BootedUpTM, BootUpSoundTMHM); // TM
+}
+
 static void BootUpSoundTMHM(u8 taskId)
 {
     PlaySE(SE_PC_LOGIN);
@@ -1203,6 +1213,33 @@ void ItemUseOutOfBattle_FormChange_ConsumedOnUse(u8 taskId)
 void ItemUseOutOfBattle_CannotUse(u8 taskId)
 {
     DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+}
+
+void ItemUseOutOfBattle_Flashlight(u8 taskId)
+{
+    PlaySE(SE_M_REFLECT);
+    FlagSet(FLAG_SYS_USE_FLASH);
+    ScriptContext1_SetupScript(EventScript_UseFlash);
+}
+
+void ItemUseOutOfBattle_BirdCaller(u8 taskId)
+{
+    if(Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE)
+    {
+        gSaveBlock2Ptr->ItemArg = 112;
+        if(!gTasks[taskId].tUsingRegisteredKeyItem)
+        {
+            gBagMenu->newScreenCallback = CB2_OpenFlyMap;
+            Task_FadeAndCloseBagMenu(taskId);
+        }
+        else
+        {
+            SetMainCallback2(CB2_OpenFlyMap);
+            DestroyTask(taskId);
+        }
+    }
+    else
+        DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
 }
 
 #undef tUsingRegisteredKeyItem

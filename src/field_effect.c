@@ -11,6 +11,7 @@
 #include "fieldmap.h"
 #include "fldeff.h"
 #include "gpu_regs.h"
+#include "item_icon.h"
 #include "main.h"
 #include "mirage_tower.h"
 #include "menu.h"
@@ -1351,9 +1352,9 @@ static void Task_UseFly(u8 taskId)
         if (!IsWeatherNotFadingIn())
             return;
 
-        gFieldEffectArguments[0] = GetCursorSelectionMonId();
-        if ((int)gFieldEffectArguments[0] > PARTY_SIZE - 1)
-            gFieldEffectArguments[0] = 0;
+        gSaveBlock2Ptr->ItemArg = GetCursorSelectionMonId();
+        if ((int)gSaveBlock2Ptr->ItemArg > PARTY_SIZE - 1)
+            gSaveBlock2Ptr->ItemArg = 0;
 
         FieldEffectStart(FLDEFF_USE_FLY);
         task->data[0]++;
@@ -1820,7 +1821,7 @@ bool8 FldEff_UseWaterfall(void)
 {
     u8 taskId;
     taskId = CreateTask(Task_UseWaterfall, 0xff);
-    gTasks[taskId].tMonId = gFieldEffectArguments[0];
+    gTasks[taskId].tMonId = gSaveBlock2Ptr->ItemArg;
     Task_UseWaterfall(taskId);
     return FALSE;
 }
@@ -1844,7 +1845,7 @@ static bool8 WaterfallFieldEffect_ShowMon(struct Task *task, struct ObjectEvent 
     if (!ObjectEventIsMovementOverridden(objectEvent))
     {
         ObjectEventClearHeldMovementIfFinished(objectEvent);
-        gFieldEffectArguments[0] = task->tMonId;
+        gSaveBlock2Ptr->ItemArg = task->tMonId;
         FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
         task->tState++;
     }
@@ -1894,7 +1895,7 @@ bool8 FldEff_UseDive(void)
 {
     u8 taskId;
     taskId = CreateTask(Task_UseDive, 0xff);
-    gTasks[taskId].data[15] = gFieldEffectArguments[0];
+    gTasks[taskId].data[15] = gSaveBlock2Ptr->ItemArg;
     gTasks[taskId].data[14] = gFieldEffectArguments[1];
     Task_UseDive(taskId);
     return FALSE;
@@ -1915,7 +1916,7 @@ static bool8 DiveFieldEffect_Init(struct Task *task)
 static bool8 DiveFieldEffect_ShowMon(struct Task *task)
 {
     ScriptContext2_Enable();
-    gFieldEffectArguments[0] = task->data[15];
+    gSaveBlock2Ptr->ItemArg = task->data[15];
     FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
     task->data[0]++;
     return FALSE;
@@ -1975,7 +1976,7 @@ static bool8 LavaridgeGymB1FWarpEffect_Launch(struct Task *task, struct ObjectEv
 {
     sprite->y2 = 0;
     task->data[3] = 1;
-    gFieldEffectArguments[0] = objectEvent->currentCoords.x;
+    gSaveBlock2Ptr->ItemArg = objectEvent->currentCoords.x;
     gFieldEffectArguments[1] = objectEvent->currentCoords.y;
     gFieldEffectArguments[2] = sprite->subpriority - 1;
     gFieldEffectArguments[3] = sprite->oam.priority;
@@ -2562,7 +2563,7 @@ bool8 FldEff_FieldMoveShowMon(void)
     else
         taskId = CreateTask(Task_FieldMoveShowMonIndoors, 0xff);
 
-    gTasks[taskId].tMonSpriteId = InitFieldMoveMonSprite(gFieldEffectArguments[0], gFieldEffectArguments[1], gFieldEffectArguments[2]);
+    gTasks[taskId].tMonSpriteId = InitFieldMoveMonSprite(gSaveBlock2Ptr->ItemArg, gFieldEffectArguments[1], gFieldEffectArguments[2]);
     return FALSE;
 }
 
@@ -2572,11 +2573,7 @@ bool8 FldEff_FieldMoveShowMonInit(void)
 {
     struct Pokemon *pokemon;
     bool32 noDucking = gFieldEffectArguments[0] & SHOW_MON_CRY_NO_DUCKING;
-    pokemon = &gPlayerParty[(u8)gFieldEffectArguments[0]];
-    gFieldEffectArguments[0] = GetMonData(pokemon, MON_DATA_SPECIES);
-    gFieldEffectArguments[1] = GetMonData(pokemon, MON_DATA_OT_ID);
-    gFieldEffectArguments[2] = GetMonData(pokemon, MON_DATA_PERSONALITY);
-    gFieldEffectArguments[0] |= noDucking;
+    gSaveBlock2Ptr->ItemArg |= noDucking;
     FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON);
     FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
     return FALSE;
@@ -2922,6 +2919,8 @@ static u8 InitFieldMoveMonSprite(u32 species, u32 otId, u32 personality)
     noDucking = (species & SHOW_MON_CRY_NO_DUCKING) >> 16;
     species &= ~SHOW_MON_CRY_NO_DUCKING;
     monSprite = CreateMonSprite_FieldMove(species, otId, personality, 320, 80, 0);
+    gSprites[monSprite].y = 80;
+    gSprites[monSprite].x = 320;
     sprite = &gSprites[monSprite];
     sprite->callback = SpriteCallbackDummy;
     sprite->oam.priority = 0;
@@ -2937,10 +2936,7 @@ static void SpriteCB_FieldMoveMonSlideOnscreen(struct Sprite *sprite)
         sprite->x = DISPLAY_WIDTH / 2;
         sprite->sOnscreenTimer = 30;
         sprite->callback = SpriteCB_FieldMoveMonWaitAfterCry;
-        if (sprite->data[6])
-            PlayCry_NormalNoDucking(sprite->sSpecies, 0, CRY_VOLUME_RS, CRY_PRIORITY_NORMAL);
-        else
-            PlayCry_Normal(sprite->sSpecies, 0);
+        PlaySE(SE_USE_ITEM);
     }
 }
 
@@ -2972,7 +2968,7 @@ static void SpriteCB_FieldMoveMonSlideOffscreen(struct Sprite *sprite)
 u8 FldEff_UseSurf(void)
 {
     u8 taskId = CreateTask(Task_SurfFieldEffect, 0xff);
-    gTasks[taskId].tMonId = gFieldEffectArguments[0];
+    gTasks[taskId].tMonId = gSaveBlock2Ptr->ItemArg;
     Overworld_ClearSavedMusic();
     Overworld_ChangeMusicTo(MUS_SURF);
     return FALSE;
@@ -3020,7 +3016,7 @@ static void SurfFieldEffect_ShowMon(struct Task *task)
     objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
     if (ObjectEventCheckHeldMovementStatus(objectEvent))
     {
-        gFieldEffectArguments[0] = task->tMonId | SHOW_MON_CRY_NO_DUCKING;
+        gSaveBlock2Ptr->ItemArg = task->tMonId | SHOW_MON_CRY_NO_DUCKING;
         FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
         task->tState++;
     }
@@ -3035,7 +3031,7 @@ static void SurfFieldEffect_JumpOnSurfBlob(struct Task *task)
         ObjectEventSetGraphicsId(objectEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_SURFING));
         ObjectEventClearHeldMovementIfFinished(objectEvent);
         ObjectEventSetHeldMovement(objectEvent, GetJumpSpecialMovementAction(objectEvent->movementDirection));
-        gFieldEffectArguments[0] = task->tDestX;
+        gSaveBlock2Ptr->ItemArg = task->tDestX;
         gFieldEffectArguments[1] = task->tDestY;
         gFieldEffectArguments[2] = gPlayerAvatar.objectEventId;
         objectEvent->fieldEffectSpriteId = FieldEffectStart(FLDEFF_SURF_BLOB);
@@ -3110,7 +3106,7 @@ u8 FldEff_NPCFlyOut(void)
     sprite->oam.paletteNum = 0;
     sprite->oam.priority = 1;
     sprite->callback = SpriteCB_NPCFlyOut;
-    sprite->data[1] = gFieldEffectArguments[0];
+    sprite->data[1] = gSaveBlock2Ptr->ItemArg;
     PlaySE(SE_M_FLY);
     return spriteId;
 }
@@ -3150,7 +3146,7 @@ static void SpriteCB_NPCFlyOut(struct Sprite *sprite)
 u8 FldEff_UseFly(void)
 {
     u8 taskId = CreateTask(Task_FlyOut, 254);
-    gTasks[taskId].tMonId = gFieldEffectArguments[0];
+    gTasks[taskId].tMonId = gSaveBlock2Ptr->ItemArg;
     return 0;
 }
 
@@ -3191,7 +3187,7 @@ static void FlyOutFieldEffect_ShowMon(struct Task *task)
     if (ObjectEventClearHeldMovementIfFinished(objectEvent))
     {
         task->tState++;
-        gFieldEffectArguments[0] = task->tMonId;
+        gSaveBlock2Ptr->ItemArg = task->tMonId;
         FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
     }
 }
@@ -3612,11 +3608,11 @@ bool8 FldEff_DestroyDeoxysRock(void)
 {
     u8 taskId;
     u8 objectEventId;
-    if (!TryGetObjectEventIdByLocalIdAndMap(gFieldEffectArguments[0], gFieldEffectArguments[1], gFieldEffectArguments[2], &objectEventId))
+    if (!TryGetObjectEventIdByLocalIdAndMap(gSaveBlock2Ptr->ItemArg, gFieldEffectArguments[1], gFieldEffectArguments[2], &objectEventId))
     {
         taskId = CreateTask(Task_DestroyDeoxysRock, 80);
         gTasks[taskId].tObjectEventId = objectEventId;
-        gTasks[taskId].tLocalId = gFieldEffectArguments[0];
+        gTasks[taskId].tLocalId = gSaveBlock2Ptr->ItemArg;
         gTasks[taskId].tMapNum = gFieldEffectArguments[1];
         gTasks[taskId].tMapGroup = gFieldEffectArguments[2];
     }
@@ -3823,7 +3819,7 @@ static void SpriteCB_DeoxysRockFragment(struct Sprite* sprite)
 bool8 FldEff_MoveDeoxysRock(struct Sprite* sprite)
 {
     u8 objectEventIdBuffer;
-    if (!TryGetObjectEventIdByLocalIdAndMap(gFieldEffectArguments[0], gFieldEffectArguments[1], gFieldEffectArguments[2], &objectEventIdBuffer))
+    if (!TryGetObjectEventIdByLocalIdAndMap(gSaveBlock2Ptr->ItemArg, gFieldEffectArguments[1], gFieldEffectArguments[2], &objectEventIdBuffer))
     {
         struct ObjectEvent *object;
         int xPos, yPos;

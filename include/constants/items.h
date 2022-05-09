@@ -927,9 +927,18 @@
 #define ITEM_TEA 755
 #define ITEM_RUBY 756
 #define ITEM_SAPPHIRE 757
-#define ITEM_SURFBOARD 758
 
-#define ITEMS_COUNT 759
+// HM Items
+#define ITEM_SURFBOARD 758 // Surf
+#define ITEM_MACHETE 759 // Cut
+#define ITEM_BIRD_CALLER 760 // Fly
+#define ITEM_PICKAXE 761 // Rock Smash
+#define ITEM_FLASHLIGHT 762 // Flash
+#define ITEM_POWER_GLOVE 763 // Strength
+#define ITEM_SCUBA_GEAR 764 // Dive
+#define ITEM_GRAPPLE_HOOK 765 // Waterfall
+
+#define ITEMS_COUNT 766
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // Range of berries given out by various NPCS
