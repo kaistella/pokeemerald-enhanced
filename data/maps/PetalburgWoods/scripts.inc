@@ -92,8 +92,9 @@ PetalburgWoods_EventScript_DevonResearcherPostBattle::
 	waitmovement 0
 	msgbox PetalburgWoods_Text_ThatWasAwfullyClose, MSGBOX_DEFAULT
 	giveitem ITEM_GREAT_BALL
-	msgbox PetalburgWoods_Text_ExpShare, MSGBOX_DEFAULT
+	msgbox PetalburgWoods_Text_TakeThis, MSGBOX_DEFAULT
 	giveitem ITEM_EXP_SHARE
+	msgbox PetalburgWoods_Text_ExpShare, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_EXP_SHARE
 	goto_if_eq VAR_RESULT, FALSE, PetalburgWoods_EventScript_BagFull
 	goto PetalburgWoods_EventScript_DevonResearcherFinish
@@ -373,17 +374,17 @@ PetalburgWoods_Text_ThatWasAwfullyClose:
 	.string "I know, I'll give you a GREAT BALL as\n"
 	.string "my thanks!$"
 
+PetalburgWoods_Text_TakeThis:
+	.string "Oh, you should take this as well!$"
+
 PetalburgWoods_Text_ExpShare:
-	.string "Oh, you should take this as well!\n"
-	.string "A POKéMON holding that\n"
-	.string "EXP. SHARE will be given some of the\l"
-	.string "EXP Points from battle.\p"
-	.string "It will get EXP Points even if it didn't\n"
-	.string "actually battle.\p"
+	.string "With that EXP. SHARE on, all\n"
+	.string "your POKéMON gain Exp. Points\l"
+	.string "even if they didn't actually battle.\p"
 	.string "It's very handy!$"
 
 PetalburgWoods_Text_TeamAquaAfterSomethingInRustboro:
-	.string "Didn't that TEAM AQUA thug say\n"
+	.string "Hey, didn't that TEAM AQUA thug say\n"
 	.string "they were after something in\l"
 	.string "RUSTBORO, too?$"
 
