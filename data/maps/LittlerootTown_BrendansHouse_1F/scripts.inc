@@ -385,7 +385,7 @@ PlayersHouse_1F_Text_RunningShoesManual:
 	.string "It's the instruction booklet for the\n"
 	.string "RUNNING SHOES.\p"
 	.string "“Press the B Button to run while\n"
-	.string "wearing your RUNNING SHOES.\p"
+	.string "wearing your RUNNING SHOES.”\p"
 	.string "“You can also press the R Button\n"
 	.string "to toggle Auto Run mode!”\p"
 	.string "“Lace up your RUNNING SHOES and hit\n"
