@@ -813,9 +813,6 @@ const u32 *const gItemIconTable[][2] =
     [ITEM_SCUBA_GEAR] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_GRAPPLE_HOOK] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
 
-    // Added Items
-    [ITEM_STRANGE_SOUVENIR] = {gItemIcon_StrangeSouvenir, gItemIconPalette_StrangeSouvenir},
-    
     // Return to field arrow
     [ITEM_FIELD_ARROW] = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };
