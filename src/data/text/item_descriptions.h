@@ -3792,3 +3792,45 @@ static const u8 sSapphireDesc[] = _(
     "A brilliant blue gem\n"
     "that symbolizes\n"
     "honesty.");
+
+// HM Items
+static const u8 sSurfboardDesc[] = _(
+	"This flat board\n"
+    "is shaped for\n"
+    "riding waves.");\
+
+static const u8 sMacheteDesc[] = _(
+    "This machete is\n"
+    "perfectly made\n"
+    "for tree cutting.");
+
+static const u8 sBirdCallerDesc[] = _(
+    "This summons\n"
+    "a POKéMON capable of\n"
+    "flying to places you've\n"
+    "already been to.");
+
+static const u8 sPickaxeDesc[] = _(
+    "A pickaxe\n"
+    "capable of"
+    "breaking rocks.");
+
+static const u8 sFlashlightDesc[] = _(
+    "A flashlight that\n"
+    "brightens up"
+    "dark areas.");
+
+static const u8 sPowerGloveDesc[] = _(
+    "A special glove that\n"
+    "gives the power"
+    "to push boulders.");
+
+static const u8 sScubaGearDesc[] = _(
+    "A set of scuba gear\n"
+    "that allows deep-sea\n"
+    "diving.");
+
+static const u8 sGrappleHookDesc[] = _(
+    "This allows you to\n"
+    "climb waterfalls while"
+    "using your surfboard.");

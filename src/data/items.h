@@ -10128,4 +10128,116 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
+
+    // HM Items
+    [ITEM_SURFBOARD] =
+    {
+        .name = _("Surfboard"),
+        .itemId = ITEM_SURFBOARD,
+        .price = 0,
+        .description = sSurfboardDesc,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
+    [ITEM_MACHETE] =
+    {
+        .name = _("Machete"),
+        .itemId = ITEM_MACHETE,
+        .price = 0,
+        .description = sMacheteDesc,
+        .importance = 1,
+        .registrability = TRUE,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
+    [ITEM_BIRD_CALLER] =
+    {
+        .name = _("Bird Caller"),
+        .itemId = ITEM_BIRD_CALLER,
+        .price = 0,
+        .description = sBirdCallerDesc,
+        .importance = 1,
+        .registrability = TRUE,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_BirdCaller,
+        .secondaryId = 0,
+    },
+
+    [ITEM_PICKAXE] =
+    {
+        .name = _("Pickaxe"),
+        .itemId = ITEM_PICKAXE,
+        .price = 0,
+        .description = sPickaxeDesc,
+        .importance = 1,
+        .registrability = TRUE,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
+    [ITEM_FLASHLIGHT] =
+    {
+        .name = _("Flashlight"),
+        .itemId = ITEM_FLASHLIGHT,
+        .price = 0,
+        .description = sPickaxeDesc,
+        .importance = 1,
+        .registrability = TRUE,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_Flashlight,
+        .secondaryId = 0,
+    },
+
+    [ITEM_POWER_GLOVE] =
+    {
+        .name = _("Power Glove"),
+        .itemId = ITEM_POWER_GLOVE,
+        .price = 0,
+        .description = sPowerGloveDesc,
+        .importance = 1,
+        .registrability = TRUE,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
+    [ITEM_SCUBA_GEAR] =
+    {
+        .name = _("Scuba Gear"),
+        .itemId = ITEM_SCUBA_GEAR,
+        .price = 0,
+        .description = sScubaGearDesc,
+        .importance = 1,
+        .registrability = TRUE,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
+    [ITEM_GRAPPLE_HOOK] =
+    {
+        .name = _("Grapple Hook"),
+        .itemId = ITEM_GRAPPLE_HOOK,
+        .price = 0,
+        .description = sGrappleHookDesc,
+        .importance = 1,
+        .registrability = TRUE,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
 };

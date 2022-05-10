@@ -2006,3 +2006,7 @@
 	.macro totemboost_evas2 battler:req
 	settotemboost \battler, 0, 0, 0, 0, 0, 0, 2
 	.endm
+	.macro setitemarg id:req
+	setvar VAR_0x8000, \id,
+	callnative ScrCmd_SetItemArg
+	.endm
