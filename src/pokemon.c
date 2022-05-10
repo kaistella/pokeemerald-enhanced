@@ -6577,6 +6577,11 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem, s
                     }
                 }
                 break;
+            case EVO_LEVEL_NIGHT_ALOLA:
+                RtcCalcLocalTime();
+                if (gLocalTime.hours >= 0 && gLocalTime.hours < 12 && gEvolutionTable[species][i].param <= level && heldItem == ITEM_STRANGE_SOUVENIR)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
             }
         }
         break;
@@ -6619,6 +6624,10 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem, s
                 break;
             case EVO_ITEM_MALE:
                 if (GetMonGender(mon) == MON_MALE && gEvolutionTable[species][i].param == evolutionItem)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_ITEM_ALOLA:
+                if (gEvolutionTable[species][i].param == evolutionItem && heldItem == ITEM_STRANGE_SOUVENIR)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             }

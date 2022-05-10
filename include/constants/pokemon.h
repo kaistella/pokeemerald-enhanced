@@ -383,6 +383,8 @@
 #define EVO_SPECIFIC_MAP                  32     // Pokémon levels up on specified map
 #define EVO_LEVEL_NATURE_AMPED            33     // Pokémon reaches the specified level, it has a Hardy, Brave, Adamant, Naughty, Docile, Impish, Lax, Hasty, Jolly, Naive, Rash, Sassy, or Quirky nature.
 #define EVO_LEVEL_NATURE_LOW_KEY          34     // Pokémon reaches the specified level, it has a Lonely, Bold, Relaxed, Timid, Serious, Modest, Mild, Quiet, Bashful, Calm, Gentle, or Careful nature.
+#define EVO_ITEM_ALOLA       			  35 // specified item is used on Pokémon while holding a Strange Souvenir
+#define EVO_LEVEL_NIGHT_ALOLA 			  36 // Pokémon reaches the specified level, is night, holding Strange Souvenir
 
 #define EVOS_PER_MON 10
 

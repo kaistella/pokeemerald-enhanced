@@ -938,7 +938,10 @@
 #define ITEM_SCUBA_GEAR 764 // Dive
 #define ITEM_GRAPPLE_HOOK 765 // Waterfall
 
-#define ITEMS_COUNT 766
+// Added Items
+#define ITEM_STRANGE_SOUVENIR 766
+
+#define ITEMS_COUNT 767
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // Range of berries given out by various NPCS

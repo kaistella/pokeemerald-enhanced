@@ -3834,3 +3834,8 @@ static const u8 sGrappleHookDesc[] = _(
     "This allows you to\n"
     "climb waterfalls while"
     "using your surfboard.");
+
+static const u8 sStrangeSouvenirDesc[] = _(
+	"An ornament that\n"
+    "brings the joy of\n"
+    "Alola to Pokémon.");
