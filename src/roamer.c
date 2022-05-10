@@ -192,9 +192,9 @@ void InitRoamer(void)
         TryAddRoamer(SPECIES_LATIAS, 40, FLEES);
 #else
     TryAddRoamer(SPECIES_LATIAS, 40, FLEES, WEEKLY_RESPAWN);
-    TryAddTerrestrialRoamer(SPECIES_PIKACHU, 8, FLEES, DAILY_RESPAWN);
-    TryAddTerrestrialRoamer(SPECIES_PIKACHU, 15, DOES_NOT_FLEE, NO_RESPAWN);
-    TryAddStalker(SPECIES_WEEDLE, 0, DOES_NOT_FLEE, AMPHIBIOUS, INSTANT_RESPAWN);
+    // TryAddTerrestrialRoamer(SPECIES_PIKACHU, 8, FLEES, DAILY_RESPAWN);
+    // TryAddTerrestrialRoamer(SPECIES_PIKACHU, 15, DOES_NOT_FLEE, NO_RESPAWN);
+    // TryAddStalker(SPECIES_WEEDLE, 0, DOES_NOT_FLEE, AMPHIBIOUS, INSTANT_RESPAWN);
     GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_LATIAS), FLAG_SET_SEEN); //Sets Pokedex to seen
     GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_PIKACHU), FLAG_SET_SEEN);
 #endif
