@@ -207,6 +207,7 @@ void NewGameInitData(void)
     InitRoamer();
     FlagSet(FLAG_SYS_POKEDEX_GET);
 #endif
+    gSaveBlock2Ptr->autoRun = FALSE;
 }
 
 static void ResetMiniGamesRecords(void)
