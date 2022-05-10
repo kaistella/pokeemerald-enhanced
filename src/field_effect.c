@@ -2918,7 +2918,7 @@ static u8 InitFieldMoveMonSprite(u32 species, u32 otId, u32 personality)
     struct Sprite *sprite;
     noDucking = (species & SHOW_MON_CRY_NO_DUCKING) >> 16;
     species &= ~SHOW_MON_CRY_NO_DUCKING;
-    monSprite = CreateMonSprite_FieldMove(species, otId, personality, 320, 80, 0);
+    monSprite = AddItemIconSprite(2110,2110,species);
     gSprites[monSprite].y = 80;
     gSprites[monSprite].x = 320;
     sprite = &gSprites[monSprite];

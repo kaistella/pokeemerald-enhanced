@@ -803,8 +803,15 @@ const u32 *const gItemIconTable[][2] =
     [ITEM_TEA] = {gItemIcon_Tea, gItemIconPalette_Tea},
     [ITEM_RUBY] = {gItemIcon_Gem, gItemIconPalette_Ruby},
     [ITEM_SAPPHIRE] = {gItemIcon_Gem, gItemIconPalette_Sapphire},
-    // Surfboard
+    // HM Items
     [ITEM_SURFBOARD] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_MACHETE] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_BIRD_CALLER] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_PICKAXE] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_FLASHLIGHT] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_POWER_GLOVE] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_SCUBA_GEAR] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_GRAPPLE_HOOK] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     // Return to field arrow
     [ITEM_FIELD_ARROW] = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };
