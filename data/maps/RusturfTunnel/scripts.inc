@@ -62,7 +62,7 @@ RusturfTunnel_EventScript_ClearTunnelScene::
 	msgbox RusturfTunnel_Text_YouShatteredBoulderTakeHM, MSGBOX_DEFAULT
 	call_if_eq VAR_TEMP_1, 2, RusturfTunnel_EventScript_WandasBoyfriendApproachPlayer
 	call_if_eq VAR_TEMP_1, 3, RusturfTunnel_EventScript_WandasBoyfriendApproachPlayer
-	giveitem ITEM_HM04
+	giveitem ITEM_POWER_GLOVE
 	setflag FLAG_RECEIVED_HM04
 	msgbox RusturfTunnel_Text_ExplainStrength, MSGBOX_DEFAULT
 	closemessage
@@ -496,9 +496,9 @@ RusturfTunnel_Text_YouShatteredBoulderTakeHM:
 	.string "I'd like you to have this HM.$"
 
 RusturfTunnel_Text_ExplainStrength:
-	.string "That HM contains STRENGTH.\p"
-	.string "If a muscular POKéMON were to learn\n"
-	.string "that, it would be able to move even\l"
+	.string "That is a POWER GLOVE.\p"
+	.string "If anyone were to use\n"
+	.string "that, they would be able to move even\l"
 	.string "large boulders.$"
 
 RusturfTunnel_Text_WandaReunion:
