@@ -6175,7 +6175,8 @@ const struct Item gItems[] =
         .description = sExpShareDesc,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_ExpShare,
+        .flingPower = 30,
     },
 
     [ITEM_QUICK_CLAW] =

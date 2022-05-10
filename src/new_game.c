@@ -208,7 +208,6 @@ void NewGameInitData(void)
     FlagSet(FLAG_SYS_POKEDEX_GET);
 #endif
     gSaveBlock2Ptr->autoRun = FALSE;
-    gSaveBlock2Ptr->expShare = 0;
 }
 
 static void ResetMiniGamesRecords(void)
