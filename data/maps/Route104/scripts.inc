@@ -1035,7 +1035,7 @@ Route104_Text_LikeFillingMouthWithSeedsTakeThis:
 	.string "Use it on a Pokémon, and it will learn\n"
 	.string "a move for firing seeds rapidly.$"
 
-Route104_Text_TMsAreOneTimeUse: @ 81ED8E7
+Route104_Text_TMsCanBeReused: @ 81ED8E7
 	.string "A word of advice!\p"
 	.string "can be used as many times as you want!$"
 

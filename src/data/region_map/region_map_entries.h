@@ -198,6 +198,7 @@ static const u8 sMapName_MarineCave[] = _("Marine Cave");
 static const u8 sMapName_TerraCave[] = _("Terra Cave");
 static const u8 sMapName_DesertUnderpass[] = _("Desert Underpass");
 static const u8 sMapName_TrainerHill[] = _("Trainer Hill");
+static const u8 sMapName_UnifiedCave[] = _("Unified Cave");
 
 
 const struct RegionMapLocation gRegionMapEntries[] = {

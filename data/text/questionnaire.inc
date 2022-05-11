@@ -32,7 +32,7 @@ Questionnaire_Text_YouCanAccessMysteryEvent::
 
 MysteryGift_Text_TheresATicketForYou:: @ 8273594
 	.string "Thank you for using the Mystery\n"
-	.string "Event System.\p":data/text/mevent.inc
+	.string "Event System.\p"
 	.string "You must be {PLAYER}.\n"
 	.string "There is a ticket here for you.$"
 

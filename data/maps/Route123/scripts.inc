@@ -241,10 +241,6 @@ Route123_Text_LoveGrassMonsHaveAny: @ 81F641E
 	.string "I love Grass-type Pokémon!\p"
 	.string "Do you have any Grass-type Pokémon?$"
 
-Route123_Text_LoveGrassMonsHaveAny:
-	.string "I love GRASS-type POKéMON!\p"
-	.string "Do you have any GRASS-type POKéMON?$"
-
 Route123_Text_YouLikeGrassMonsTooHaveThis:
 	.string "Oh?\p"
 	.string "You like Grass-type Pokémon, too,\n"
