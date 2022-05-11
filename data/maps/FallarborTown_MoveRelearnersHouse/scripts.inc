@@ -54,20 +54,20 @@ FallarborTown_MoveRelearnersHouse_EventScript_ComeBack::
 	releaseall
 	end
 
-FallarborTown_MoveRelearnersHouse_Text_ImTheMoveTutor:
-	.string "I'm the MOVE TUTOR.\p"
-	.string "I know all the moves that POKéMON\n"
+FallarborTown_MoveRelearnersHouse_Text_ImTheMoveTutor: @ 820145C
+	.string "I'm the Move Tutor.\p"
+	.string "I know all the moves that Pokémon\n"
 	.string "learn--every one of them--and I can\l"
-	.string "teach POKéMON those moves.\p"
-	.string "I can teach a move to a POKéMON\n"
+	.string "teach Pokémon those moves.\p"
+	.string "I can teach a move to a Pokémon\n"
 	.string "of yours if you'd like.\p"
 
-FallarborTown_MoveRelearnersHouse_Text_WantMeToTeachMove:
+FallarborTown_MoveRelearnersHouse_Text_WantMeToTeachMove: @ 8201541
 	.string "Let me guess, you want me to teach\n"
 	.string "a move?$"
 
-FallarborTown_MoveRelearnersHouse_Text_TutorWhichMon:
-	.string "Which POKéMON needs tutoring?$"
+FallarborTown_MoveRelearnersHouse_Text_TutorWhichMon: @ 82015A5
+	.string "Which Pokémon needs tutoring?$"
 
 FallarborTown_MoveRelearnersHouse_Text_TeachWhichMove:
 	.string "Which move should I teach?$"
@@ -75,13 +75,13 @@ FallarborTown_MoveRelearnersHouse_Text_TeachWhichMove:
 FallarborTown_MoveRelearnersHouse_Text_DontHaveMoveToTeachPokemon:
 	.string "Sorry…\p"
 	.string "It doesn't appear as if I have any move\n"
-	.string "I can teach that POKéMON.$"
+	.string "I can teach that Pokémon.$"
 
-FallarborTown_MoveRelearnersHouse_Text_ComeBack:
-	.string "If your POKéMON need to learn a move,\n"
+FallarborTown_MoveRelearnersHouse_Text_ComeBack: @ 8201653
+	.string "If your Pokémon need to learn a move,\n"
 	.string "come back any time.$"
 
 FallarborTown_MoveRelearnersHouse_Text_CantTeachEgg:
 	.string "Hunh? There isn't a single move that\n"
-	.string "I can teach an EGG.$"
+	.string "I can teach an Egg.$"
 
