@@ -116,6 +116,7 @@ static void HandleEndTurn_BattleLost(void);
 static void HandleEndTurn_RanFromBattle(void);
 static void HandleEndTurn_MonFled(void);
 static void HandleEndTurn_FinishBattle(void);
+u8 toUpper(u8 ch);
 static void SpriteCB_UnusedBattleInit(struct Sprite* sprite);
 static void SpriteCB_UnusedBattleInit_Main(struct Sprite *sprite);
 
@@ -1931,7 +1932,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 const struct TrainerMonNoItemDefaultMoves *partyData = gTrainers[trainerNum].party.NoItemDefaultMoves;
 
                 for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
-                    nameHash += gSpeciesNames[partyData[i].species][j];
+                    nameHash += toUpper(gSpeciesNames[partyData[i].species][j]);
 
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
@@ -1943,7 +1944,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 const struct TrainerMonNoItemCustomMoves *partyData = gTrainers[trainerNum].party.NoItemCustomMoves;
 
                 for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
-                    nameHash += gSpeciesNames[partyData[i].species][j];
+                    nameHash += toUpper(gSpeciesNames[partyData[i].species][j]);
 
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
@@ -1961,7 +1962,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 const struct TrainerMonItemDefaultMoves *partyData = gTrainers[trainerNum].party.ItemDefaultMoves;
 
                 for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
-                    nameHash += gSpeciesNames[partyData[i].species][j];
+                    nameHash += toUpper(gSpeciesNames[partyData[i].species][j]);
 
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
@@ -1975,7 +1976,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 const struct TrainerMonItemCustomMoves *partyData = gTrainers[trainerNum].party.ItemCustomMoves;
 
                 for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
-                    nameHash += gSpeciesNames[partyData[i].species][j];
+                    nameHash += toUpper(gSpeciesNames[partyData[i].species][j]);
 
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
@@ -5219,6 +5220,67 @@ static void HandleEndTurn_FinishBattle(void)
     {
         if (gBattleControllerExecFlags == 0)
             gBattleScriptingCommandsTable[gBattlescriptCurrInstr[0]]();
+    }
+}
+
+u8 toUpper(u8 ch)
+{
+    switch (ch)
+    {
+        case CHAR_a:
+            return (CHAR_A);
+        case CHAR_b:
+            return (CHAR_B);
+        case CHAR_c:
+            return (CHAR_C);
+        case CHAR_d:
+            return (CHAR_D);
+        case CHAR_e:
+            return (CHAR_E);
+        case CHAR_f:
+            return (CHAR_F);
+        case CHAR_g:
+            return (CHAR_G);
+        case CHAR_h:
+            return (CHAR_H);
+        case CHAR_i:
+            return (CHAR_I);
+        case CHAR_j:
+            return (CHAR_J);
+        case CHAR_k:
+            return (CHAR_K);
+        case CHAR_l:
+            return (CHAR_L);
+        case CHAR_m:
+            return (CHAR_M);
+        case CHAR_n:
+            return (CHAR_N);
+        case CHAR_o:
+            return (CHAR_O);
+        case CHAR_p:
+            return (CHAR_P);
+        case CHAR_q:
+            return (CHAR_Q);
+        case CHAR_r:
+            return (CHAR_R);
+        case CHAR_s:
+            return (CHAR_S);
+        case CHAR_t:
+            return (CHAR_T);
+        case CHAR_u:
+            return (CHAR_U);
+        case CHAR_v:
+            return (CHAR_V);
+        case CHAR_w:
+            return (CHAR_W);
+        case CHAR_x:
+            return (CHAR_X);
+        case CHAR_y:
+            return (CHAR_Y);
+        case CHAR_z:
+            return (CHAR_Z);
+        default:
+          return (ch);
     }
 }
 
