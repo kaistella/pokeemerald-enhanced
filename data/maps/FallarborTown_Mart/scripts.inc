@@ -39,19 +39,18 @@ FallarborTown_Mart_Pokemart:
 	release
 	end
 
-	.align 2
-FallarborTown_Mart_Pokemart:
-	.2byte ITEM_QUICK_BALL,
-	.2byte ITEM_DIVE_BALL,
-	.2byte ITEM_LEVEL_BALL,
-	.2byte ITEM_MOON_BALL,
-	.2byte ITEM_CHOICE_SCARF,
-	.2byte ITEM_RAZOR_CLAW,
-	.2byte ITEM_FIRE_STONE,
-	.2byte ITEM_DAWN_STONE,
-	.2byte ITEM_GALARICA_CUFF,
-	.2byte ITEM_GALARICA_TWIG,
-	.2byte ITEM_HOUNDOOMITE,
+FallarborTown_Mart_Pokemart2:
+	.2byte ITEM_QUICK_BALL
+	.2byte ITEM_DIVE_BALL
+	.2byte ITEM_LEVEL_BALL
+	.2byte ITEM_MOON_BALL
+	.2byte ITEM_CHOICE_SCARF
+	.2byte ITEM_RAZOR_CLAW
+	.2byte ITEM_FIRE_STONE
+	.2byte ITEM_DAWN_STONE
+	.2byte ITEM_GALARICA_CUFF
+	.2byte ITEM_GALARICA_TWIG
+	.2byte ITEM_HOUNDOOMINITE
 	.2byte ITEM_LOPUNNITE
 	release
 	end

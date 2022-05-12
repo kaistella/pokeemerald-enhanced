@@ -40,17 +40,17 @@ VerdanturfTown_Mart_Pokemart:
 
 	.align 2
 VerdanturfTown_Mart_Pokemart2:
-	.2byte ITEM_DUSK_BALL,
-	.2byte ITEM_HEAL_BALL,
-	.2byte ITEM_FAST_BALL,
-	.2byte ITEM_LURE_BALL,
-	.2byte ITEM_GRASSY_SEED,
-	.2byte ITEM_ELECTRIC_SEED,
-	.2byte ITEM_MISTY_SEED,
-	.2byte ITEM_PSYCHIC_SEED,
-	.2byte ITEM_SWEET_APPLE,
-	.2byte ITEM_TART_APPLE,
-	.2byte ITEM_WHIPPED_DREAM,
+	.2byte ITEM_DUSK_BALL
+	.2byte ITEM_HEAL_BALL
+	.2byte ITEM_FAST_BALL
+	.2byte ITEM_LURE_BALL
+	.2byte ITEM_GRASSY_SEED
+	.2byte ITEM_ELECTRIC_SEED
+	.2byte ITEM_MISTY_SEED
+	.2byte ITEM_PSYCHIC_SEED
+	.2byte ITEM_SWEET_APPLE
+	.2byte ITEM_TART_APPLE
+	.2byte ITEM_WHIPPED_DREAM
 	.2byte ITEM_SACHET
 	release
 	end

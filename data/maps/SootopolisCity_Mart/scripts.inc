@@ -37,18 +37,18 @@ SootopolisCity_Mart_Pokemart:
 	end
 
 	.align 2
-SootopolisCity_Mart_Pokemart:
-	.2byte ITEM_LUXURY_BALL,
-	.2byte ITEM_BEAST_BALL,
-	.2byte ITEM_CHERISH_BALL,
-	.2byte ITEM_EJECT_BUTTON,
-	.2byte ITEM_GRIP_CALL,
-	.2byte ITEM_PROTECTIVE_PADS,
-	.2byte ITEM_WEAKNESS_POLICY,
-	.2byte ITEM_SNOWBALL,
-	.2byte ITEM_WATER_STONE,
-	.2byte ITEM_ICE_STONE,
-	.2byte ITEM_SLOWBRONITE,
+SootopolisCity_Mart_Pokemart2:
+	.2byte ITEM_LUXURY_BALL
+	.2byte ITEM_BEAST_BALL
+	.2byte ITEM_CHERISH_BALL
+	.2byte ITEM_EJECT_BUTTON
+	.2byte ITEM_GRIP_CLAW
+	.2byte ITEM_PROTECTIVE_PADS
+	.2byte ITEM_WEAKNESS_POLICY
+	.2byte ITEM_SNOWBALL
+	.2byte ITEM_WATER_STONE
+	.2byte ITEM_ICE_STONE
+	.2byte ITEM_SLOWBRONITE
 	.2byte ITEM_MEDICHAMITE
 	release
 	end
