@@ -73,7 +73,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_115_KELPSY_1",
+      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_115_KELPSY",
       "script": "BerryTreeScript",
       "flag": "0"
     },
@@ -86,7 +86,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_115_KELPSY_2",
+      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_115_KEBIA",
       "script": "BerryTreeScript",
       "flag": "0"
     },
@@ -99,7 +99,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_115_KELPSY_3",
+      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_115_MICLE",
       "script": "BerryTreeScript",
       "flag": "0"
     },
@@ -203,7 +203,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_115_BLUK_1",
+      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_115_BLUK",
       "script": "BerryTreeScript",
       "flag": "0"
     },
@@ -216,7 +216,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_115_BLUK_2",
+      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_115_JABOCA",
       "script": "BerryTreeScript",
       "flag": "0"
     },
