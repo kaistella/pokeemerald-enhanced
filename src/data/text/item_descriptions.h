@@ -3806,31 +3806,30 @@ static const u8 sMacheteDesc[] = _(
 
 static const u8 sBirdCallerDesc[] = _(
     "This summons\n"
-    "a POKéMON capable of\n"
+    "a Pokémon capable of\n"
     "flying to places you've\n"
     "already been to.");
 
 static const u8 sPickaxeDesc[] = _(
-    "A pickaxe\n"
-    "capable of"
-    "breaking rocks.");
+    "A pickaxe capable\n"
+    "of breaking rocks.\n");
 
 static const u8 sFlashlightDesc[] = _(
     "A flashlight that\n"
-    "brightens up"
-    "dark areas.");
+    "brightens up\n"
+    "dark areas.\n");
 
 static const u8 sPowerGloveDesc[] = _(
     "A special glove that\n"
-    "gives the power"
-    "to push boulders.");
+    "gives the power\n"
+    "to push boulders.\n");
 
 static const u8 sScubaGearDesc[] = _(
     "A set of scuba gear\n"
     "that allows deep-sea\n"
-    "diving.");
+    "diving.\n");
 
 static const u8 sGrappleHookDesc[] = _(
     "This allows you to\n"
-    "climb waterfalls while"
-    "using your surfboard.");
+    "climb waterfalls while\n"
+    "using your surfboard.\n");
