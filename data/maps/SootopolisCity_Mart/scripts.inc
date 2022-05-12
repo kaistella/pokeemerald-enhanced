@@ -11,6 +11,16 @@ SootopolisCity_Mart_EventScript_Clerk::
 	release
 	end
 
+SootopolisCity_Mart_EventScript_Clerk2::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart SootopolisCity_Mart_Pokemart2
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
 	.align 2
 SootopolisCity_Mart_Pokemart:
 	.2byte ITEM_ULTRA_BALL
@@ -23,6 +33,23 @@ SootopolisCity_Mart_Pokemart:
 	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_SHADOW_MAIL
 	.2byte ITEM_NONE
+	release
+	end
+
+	.align 2
+SootopolisCity_Mart_Pokemart:
+	.2byte ITEM_LUXURY_BALL,
+	.2byte ITEM_BEAST_BALL,
+	.2byte ITEM_CHERISH_BALL,
+	.2byte ITEM_EJECT_BUTTON,
+	.2byte ITEM_GRIP_CALL,
+	.2byte ITEM_PROTECTIVE_PADS,
+	.2byte ITEM_WEAKNESS_POLICY,
+	.2byte ITEM_SNOWBALL,
+	.2byte ITEM_WATER_STONE,
+	.2byte ITEM_ICE_STONE,
+	.2byte ITEM_SLOWBRONITE,
+	.2byte ITEM_MEDICHAMITE
 	release
 	end
 

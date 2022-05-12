@@ -11,6 +11,16 @@ FallarborTown_Mart_EventScript_Clerk::
 	release
 	end
 
+FallarborTown_Mart_EventScript_Clerk2::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart FallarborTown_Mart_Pokemart
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
 	.align 2
 FallarborTown_Mart_Pokemart:
 	.2byte ITEM_GREAT_BALL
@@ -26,6 +36,23 @@ FallarborTown_Mart_Pokemart:
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_NONE
+	release
+	end
+
+	.align 2
+FallarborTown_Mart_Pokemart:
+	.2byte ITEM_QUICK_BALL,
+	.2byte ITEM_DIVE_BALL,
+	.2byte ITEM_LEVEL_BALL,
+	.2byte ITEM_MOON_BALL,
+	.2byte ITEM_CHOICE_SCARF,
+	.2byte ITEM_RAZOR_CLAW,
+	.2byte ITEM_FIRE_STONE,
+	.2byte ITEM_DAWN_STONE,
+	.2byte ITEM_GALARICA_CUFF,
+	.2byte ITEM_GALARICA_TWIG,
+	.2byte ITEM_HOUNDOOMITE,
+	.2byte ITEM_LOPUNNITE
 	release
 	end
 

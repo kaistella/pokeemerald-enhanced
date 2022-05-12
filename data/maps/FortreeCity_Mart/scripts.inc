@@ -11,6 +11,16 @@ FortreeCity_Mart_EventScript_Clerk::
 	release
 	end
 
+FortreeCity_Mart_EventScript_Clerk2::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart FortreeCity_Mart_Pokemart
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
 	.align 2
 FortreeCity_Mart_Pokemart:
 	.2byte ITEM_GREAT_BALL
@@ -24,6 +34,23 @@ FortreeCity_Mart_Pokemart:
 	.2byte ITEM_SUPER_REPEL
 	.2byte ITEM_WOOD_MAIL
 	.2byte ITEM_NONE
+	release
+	end
+
+	.align 2
+FortreeCity_Mart_Pokemart2:
+	.2byte ITEM_NET_BALL,
+	.2byte ITEM_DREAM_BALL,
+	.2byte ITEM_FRIEND_BALL,
+	.2byte ITEM_HEAVY_BALL,
+	.2byte ITEM_LOVE_BALL,
+	.2byte ITEM_CHOICE_SPECS,
+	.2byte ITEM_AIR_BALLOON,
+	.2byte ITEM_RAZOR_FANG,
+	.2byte ITEM_THUNDER_STONE,
+	.2byte ITEM_DUSK_STONE,
+	.2byte ITEM_PIGEOTITE,
+	.2byte ITEM_BEEDRILITE
 	release
 	end
 

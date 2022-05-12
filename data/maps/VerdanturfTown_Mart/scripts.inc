@@ -11,6 +11,16 @@ VerdanturfTown_Mart_EventScript_Clerk::
 	release
 	end
 
+VerdanturfTown_Mart_EventScript_Clerk2::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart VerdanturfTown_Mart_Pokemart2
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
 	.align 2
 VerdanturfTown_Mart_Pokemart:
 	.2byte ITEM_GREAT_BALL
@@ -25,6 +35,23 @@ VerdanturfTown_Mart_Pokemart:
 	.2byte ITEM_X_SP_ATK
 	.2byte ITEM_FLUFFY_TAIL
 	.2byte ITEM_NONE
+	release
+	end
+
+	.align 2
+VerdanturfTown_Mart_Pokemart2:
+	.2byte ITEM_DUSK_BALL,
+	.2byte ITEM_HEAL_BALL,
+	.2byte ITEM_FAST_BALL,
+	.2byte ITEM_LURE_BALL,
+	.2byte ITEM_GRASSY_SEED,
+	.2byte ITEM_ELECTRIC_SEED,
+	.2byte ITEM_MISTY_SEED,
+	.2byte ITEM_PSYCHIC_SEED,
+	.2byte ITEM_SWEET_APPLE,
+	.2byte ITEM_TART_APPLE,
+	.2byte ITEM_WHIPPED_DREAM,
+	.2byte ITEM_SACHET
 	release
 	end
 
