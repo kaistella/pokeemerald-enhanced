@@ -790,8 +790,8 @@ Route115_EventScript_ItemDestinyKnot::
 	finditem ITEM_DESTINY_KNOT
 	end
 
-MossdeepCity_SpaceCenter_2F_EventScript_ItemDestinyKnot::
-	finditem ITEM_DESTINY_KNOT
+MossdeepCity_SpaceCenter_2F_EventScript_ItemDubiousDisc::
+	finditem ITEM_DUBIOUS_DISC
 	end
 
 NewMauville_Inside_EventScript_ItemElectirizer::

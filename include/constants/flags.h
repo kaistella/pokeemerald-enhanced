@@ -1250,7 +1250,7 @@
 #define FLAG_ITEM_ROUTE_120_BINDING_BAND                            0x4B1 // Custom Flag
 #define FLAG_ITEM_ROUTE_119_DAMP_ROCK                               0x4B2 // Custom Flag
 #define FLAG_ITEM_ROUTE_115_DESTINY_KNOT                            0x4B3 // Custom Flag
-#define FLAG_ITEM_MOSSDEEP_CITY_SPACE_CENTER_2F_DUBIOUS_DISK        0x4B4 // Custom Flag
+#define FLAG_ITEM_MOSSDEEP_CITY_SPACE_CENTER_2F_DUBIOUS_DISC        0x4B4 // Custom Flag
 #define FLAG_ITEM_NEW_MAUVILLE_ELECTIRIZER                          0x4B5 // Custom Flag
 #define FLAG_ITEM_DEWFORD_TOWN_EXPERT_BELT                          0x4B6 // Custom Flag
 #define FLAG_ITEM_FIERY_PATH_FLAME_ORB                              0x4B7 // Custom Flag
