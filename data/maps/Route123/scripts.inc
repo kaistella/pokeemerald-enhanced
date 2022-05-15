@@ -11,7 +11,8 @@ Route123_OnResume:
 
 Route123_EventScript_TryRemoveSnorlax::
 	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Common_EventScript_NopReturn
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, Common_EventScript_NopReturn
 	removeobject VAR_LAST_TALKED
 	return
 
@@ -189,52 +190,60 @@ Route123_EventScript_RematchFernando::
 	end
 
 Route123_EventScript_Snorlax::
-	lock
-	msgbox Route123_EventScript_SnorlaxText, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, Route123_EventScript_SnorlaxAccept
-	goto_if_eq VAR_RESULT, NO, Route123_EventScript_SnorlaxDecline
-	end
-
-Route123_EventScript_SnorlaxText::
-	.string "A Pokémon sleeps soundly...\p"
-	.string "Will you wake the Pokémon?$"
-
-Route123_EventScript_SnorlaxAccept::
 	lockall
 	waitse
 	playmoncry SPECIES_SNORLAX, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setvar VAR_LAST_TALKED, LOCALID_SNORLAX
 	setwildbattle SPECIES_SNORLAX, 30
+	setvar VAR_LAST_TALKED, LOCALID_SNORLAX
+	setvar VAR_0x8009, SPECIES_SNORLAX
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	dowildbattle
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, Route123_EventScript_CaughtSnorlax
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route123_EventScript_DefeatedSnorlax
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route123_EventScript_RanFromSnorlax
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, Route123_EventScript_RanFromSnorlax
-	releaseall
 	end
 
-Route123_EventScript_SnorlaxDecline::
-	msgbox Route123_EventScript_SnorlaxNoText, MSGBOX_DEFAULT
-	release
+Route123_EventScript_CaughtSnorlax::
+	setflag FLAG_DEFEATED_SNORLAX
+	goto Route123_EventScript_CaughtSnorlaxText
 	end
 
-Route123_EventScript_SnorlaxNoText::
-	.string "You leave the POKéMON be.$"
+Route123_EventScript_CaughtSnorlaxText::
+	msgbox Route123_Text_CaughtSnorlax, MSGBOX_AUTOCLOSE
+	end
+
+Route123_Text_CaughtSnorlax::
+	.string "The sleeping Snorlax was caught.$"
+	end
 
 Route123_EventScript_DefeatedSnorlax::
-	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	setflag FLAG_DEFEATED_SNORLAX
-	goto Common_EventScript_RemoveStaticPokemon
+	goto Route123_EventScript_DefeatedSnorlaxText
+	end
+
+Route123_EventScript_DefeatedSnorlaxText::
+	msgbox Route123_Text_DefeatedSnorlax, MSGBOX_AUTOCLOSE
+	end
+
+Route123_Text_DefeatedSnorlax::
+	.string "The sleeping Snorlax was defeated.$"
 	end
 
 Route123_EventScript_RanFromSnorlax::
-	setvar VAR_0x8004, SPECIES_SNORLAX
-	goto Common_EventScript_RanFromStaticPokemon
-	release
+	msgbox Route123_Text_RanFromSnorlax, MSGBOX_AUTOCLOSE
+	end
+
+Route123_EventScript_RanFromSnorlaxText::
+	msgbox Route123_Text_RanFromSnorlax, MSGBOX_AUTOCLOSE
+	end
+
+Route123_Text_RanFromSnorlax::
+	.string "You decided to battle the Snorlax later.$"
 	end
 
 Route123_Text_LoveGrassMonsHaveAny: @ 81F641E
