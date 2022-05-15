@@ -702,11 +702,11 @@ PetalburgCity_EventScript_ItemGardevoirite::
 	finditem ITEM_GARDEVOIRITE
 	end
 	
-ShoalCave_LowTideIceRoom_EventScript_Glalitite::	
+ShoalCave_LowTideIceRoom_EventScript_ItemGlalitite::	
 	finditem ITEM_GLALITITE
 	end
 	
-EverGrandeCity_EventScript_Gyaradosite::
+EverGrandeCity_EventScript_ItemGyaradosite::
 	finditem ITEM_GYARADOSITE
 	end
 	
@@ -808,4 +808,64 @@ FieryPath_EventScript_ItemFlameOrb::
 
 MtPyre_Exterior_EventScript_ItemFloatStone::
 	finditem ITEM_FLOAT_STONE
+	end
+
+Route111_EventScript_ItemGripClaw::
+	finditem ITEM_GRIP_CLAW
+	end
+
+JaggedPass_EventScript_ItemHeatRock::
+	finditem ITEM_HEAT_ROCK
+	end
+
+JaggedPass_EventScript_ItemHeavyDutyBoots::
+	finditem ITEM_HEAVY_DUTY_BOOTS
+	end
+
+NewMauville_Inside_EventScript_ItemIronBall::
+	finditem ITEM_IRON_BALL
+	end
+
+Route111_EventScript_ItemGripClaw::
+	finditem ITEM_LIGHT_CLAY
+	end
+
+MtChimney_EventScript_ItemMagmarizer::
+	finditem ITEM_MAGMARIZER
+	end
+
+Route123_EventScript_ItemPowerHerb::
+	finditem ITEM_POWER_HERB
+	end
+
+Route115_EventScript_ItemShedShell::
+	finditem ITEM_SHED_SHELL
+	end
+
+Route111_EventScript_ItemSmoothRock::
+	finditem ITEM_SMOOTH_ROCK
+	end
+
+Route117_EventScript_ItemDawnStone::
+	finditem ITEM_DAWN_STONE
+	end
+
+MtPyre_Summit_ItemDuskStone::
+	finditem ITEM_DUSK_STONE
+	end
+
+ShoalCave_LowTideIceRoom_EventScript_ItemGlalitite::	
+	finditem ITEM_ICE_STONE
+	end
+
+LilycoveCity_EventScript_ItemPrismScale:
+	finditem ITEM_PRISM_SCALE
+	end
+
+PetalburgWoods_EventScript_ItemSweetApple::
+	finditem ITEM_SWEET_APPLE
+	end
+
+PetalburgWoods_EventScript_ItemTartApple::
+	finditem ITEM_TART_APPLE
 	end
