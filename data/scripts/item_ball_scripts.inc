@@ -777,3 +777,35 @@ Route118_EventScript_ItemDreamBall::
 MagmaHideout_2F_3R_EventScript_ItemBlackSludge::
 	finditem ITEM_BLACK_SLUDGE
 	end
+	
+Route120_EventScript_ItemBindingBand::
+	finditem ITEM_BINDING_BAND
+	end
+
+Route119_EventScript_ItemDampRock::
+	finditem ITEM_DAMP_ROCK
+	end
+
+Route115_EventScript_ItemDestinyKnot::
+	finditem ITEM_DESTINY_KNOT
+	end
+
+MossdeepCity_SpaceCenter_2F_EventScript_ItemDestinyKnot::
+	finditem ITEM_DESTINY_KNOT
+	end
+
+NewMauville_Inside_EventScript_ItemElectirizer::
+	finditem ITEM_ELECTIRIZER
+	end
+
+DewfordTown_EventScript_ItemExpertBelt::
+	finditem ITEM_EXPERT_BELT
+	end
+
+FieryPath_EventScript_ItemFlameOrb::
+	finditem ITEM_FLAME_ORB
+	end
+
+MtPyre_Exterior_EventScript_ItemFloatStone::
+	finditem ITEM_FLOAT_STONE
+	end
