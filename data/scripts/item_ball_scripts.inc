@@ -603,11 +603,11 @@ Route110_TrickHousePuzzle8_EventScript_ItemBeadMail::
 	end
 
 VictoryRoad_1F_EventScript_ItemMaxElixir::
-	finditem ITEM_MEGA_RING
+	finditem ITEM_MAX_ELIXIR
 	end
 
 VictoryRoad_1F_EventScript_ItemPPUp::
-	finditem ITEM_BLAZIKENITE
+	finditem ITEM_PP_UP
 	end
 
 VictoryRoad_B1F_EventScript_ItemTM29::
@@ -615,7 +615,7 @@ VictoryRoad_B1F_EventScript_ItemTM29::
 	end
 
 VictoryRoad_B1F_EventScript_ItemFullRestore::
-	finditem ITEM_MAWILITE
+	finditem ITEM_FULL_RESTORE
 	end
 
 VictoryRoad_B2F_EventScript_ItemFullHeal::
@@ -716,4 +716,64 @@ SafariZone_North_EventScript_ItemHeracronite::
 
 SafariZone_Northeast_EventScript_ItemKangaskhanite::
 	finditem ITEM_KANGASKHANITE
+	end
+
+VictoryRoad_1F_EventScript_ItemLucarionite::
+	finditem ITEM_LUCARIONITE
+	end
+
+Route110_EventScript_ItemManectite::
+	finditem ITEM_MANECTITE
+	end
+
+SeafloorCavern_Room6_EventScript_ItemMawilite::
+	finditem ITEM_MAWILITE
+	end
+	
+MossdeepCity_StevensHouse_EventScript_ItemMetagrossite::
+	finditem ITEM_METAGROSSITE
+	end
+
+Route119_EventScript_ItemPinsirite::
+	finditem ITEM_PINSIRITE
+	end
+
+AbandonedShip_HiddenFloorRooms_EventScript_ItemSablenite::
+	finditem ITEM_SABLENITE
+	end
+
+MeteorFalls_StevensRoom_EventScript_ItemSalamencite::
+	finditem ITEM_SALAMENCITE
+	end
+
+Route118_EventScript_ItemScizorite::
+	finditem ITEM_SCIZORITE
+	end
+	
+Route111_EventScript_ItemSteelixite::
+	finditem ITEM_STEELIXITE
+	end
+	
+Route128_EventScript_ItemSharpedonite::
+	finditem ITEM_SHARPEDONITE
+	end
+	
+MeteorFalls_1F_1R_EventScript_ItemDuskBall::
+	finditem ITEM_DUSK_BALL
+	end
+	
+Route104_EventScript_ItemHealBall::
+	finditem ITEM_HEAL_BALL
+	end
+
+Route118_EventScript_ItemQuickBall::
+	finditem ITEM_QUICK_BALL
+	end
+
+Route118_EventScript_ItemDreamBall::
+	finditem ITEM_DREAM_BALL
+	end
+	
+MagmaHideout_2F_3R_EventScript_ItemBlackSludge::
+	finditem ITEM_BLACK_SLUDGE
 	end
