@@ -630,8 +630,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 32,
-      "y": 72,
+      "x": 33,
+      "y": 104,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -640,6 +640,45 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route111_EventScript_ItemSteelixite",
       "flag": "FLAG_ITEM_ROUTE_111_STEELIXITE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 37,
+      "y": 18,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route111_EventScript_ItemGripClaw",
+      "flag": "FLAG_ITEM_ROUTE_111_GRIP_CLAW"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 31,
+      "y": 35,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route111_EventScript_ItemLightClay",
+      "flag": "FLAG_ITEM_ROUTE_111_LIGHT_CLAY"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 32,
+      "y": 56,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route111_EventScript_ItemSmoothRock",
+      "flag": "FLAG_ITEM_ROUTE_111_SMOOTH_ROCK"
     }
   ],
   "warp_events": [

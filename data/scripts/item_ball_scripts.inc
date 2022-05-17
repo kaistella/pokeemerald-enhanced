@@ -826,7 +826,7 @@ NewMauville_Inside_EventScript_ItemIronBall::
 	finditem ITEM_IRON_BALL
 	end
 
-Route111_EventScript_ItemGripClaw::
+Route111_EventScript_ItemLightClay::
 	finditem ITEM_LIGHT_CLAY
 	end
 
@@ -838,7 +838,7 @@ Route123_EventScript_ItemPowerHerb::
 	finditem ITEM_POWER_HERB
 	end
 
-Route115_EventScript_ItemShedShell::
+Route113_EventScript_ItemShedShell::
 	finditem ITEM_SHED_SHELL
 	end
 
@@ -854,7 +854,7 @@ MtPyre_Summit_ItemDuskStone::
 	finditem ITEM_DUSK_STONE
 	end
 
-ShoalCave_LowTideIceRoom_EventScript_ItemGlalitite::	
+ShoalCave_LowTideIceRoom_EventScript_ItemIceStone::	
 	finditem ITEM_ICE_STONE
 	end
 

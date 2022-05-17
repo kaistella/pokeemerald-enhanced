@@ -1262,7 +1262,7 @@
 #define FLAG_ITEM_ROUTE_111_LIGHT_CLAY                              0x4BD // Custom Flag
 #define FLAG_ITEM_MT_CHIMNEY_MAGMARIZER                             0x4BE // Custom Flag
 #define FLAG_ITEM_ROUTE_123_POWER_HERB                              0x4BF // Custom Flag
-#define FLAG_ITEM_ROUTE_115_SHED_SHELL                              0x4C0 // Custom Flag
+#define FLAG_ITEM_ROUTE_113_SHED_SHELL                              0x4C0 // Custom Flag
 #define FLAG_ITEM_ROUTE_111_SMOOTH_ROCK                             0x4C1 // Custom Flag
 #define FLAG_ITEM_ROUTE_117_DAWN_STONE                              0x4C2 // Custom Flag
 #define FLAG_ITEM_MT_PYRE_SUMMIT_DUSK_STONE                         0x4C3 // Custom Flag
