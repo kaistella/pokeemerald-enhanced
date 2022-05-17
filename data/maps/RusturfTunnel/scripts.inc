@@ -493,7 +493,7 @@ RusturfTunnel_Text_YouShatteredBoulderTakeHM:
 	.string "Wow! You shattered that boulder\n"
 	.string "blocking the way.\p"
 	.string "To show you how much I appreciate it,\n"
-	.string "I'd like you to have this HM.$"
+	.string "I'd like you to have this.$"
 
 RusturfTunnel_Text_ExplainStrength: @ 822D6D2
 	.string "That is a Power Glove.\p"

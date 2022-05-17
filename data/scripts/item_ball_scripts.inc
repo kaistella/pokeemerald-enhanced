@@ -858,7 +858,7 @@ ShoalCave_LowTideIceRoom_EventScript_ItemIceStone::
 	finditem ITEM_ICE_STONE
 	end
 
-LilycoveCity_EventScript_ItemPrismScale:
+LilycoveCity_EventScript_ItemPrismScale::
 	finditem ITEM_PRISM_SCALE
 	end
 

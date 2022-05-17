@@ -572,8 +572,8 @@ MossdeepCity_Gym_Text_ReceivedMindBadge: @ 822196A
 MossdeepCity_Gym_Text_ExplainMindBadgeTakeThis: @ 8221999
 	.string "Tate: The Mind Badge enhances the\n"
 	.string "Sp. Atk and Sp. Def of Pokémon.\p"
-	.string "Liza: It also lets you use the HM move\n"
-	.string "Dive outside of battle.\p"
+	.string "Liza: It also lets you use Scuba Gear\n"
+	.string "to dive underwater.\p"
 	.string "Tate: You should also take this, too.$"
 
 MossdeepCity_Gym_Text_ExplainCalmMind: @ 8221A40

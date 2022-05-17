@@ -1285,7 +1285,7 @@ PetalburgCity_Gym_Text_ReceivedBalanceBadge: @ 8206162
 PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis: @ 820618A
 	.string "Dad: With that Badge, the Defense\n"
 	.string "of all your Pokémon will increase.\p"
-	.string "Pokémon that know the HM move Surf\n"
+	.string "If you have a Surfboard, you\n"
 	.string "will be able to travel over water.\p"
 	.string "This is my gift to you. {PLAYER}, I'm\n"
 	.string "sure you can use it correctly.$"

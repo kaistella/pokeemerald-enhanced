@@ -156,9 +156,9 @@ MossdeepCity_StevensHouse_Text_YouveEarnedHMDive: @ 8222936
 	.string "but this is my home.\p"
 	.string "Thank you for all that you've done.\p"
 	.string "This is my token of appreciation.\n"
-	.string "It's the Hidden Machine Dive.\p"
-	.string "No need to be shy--you've earned\n"
-	.string "this HM.$"
+	.string "It's some Scuba Gear.\p"
+	.string "No need to be shy--you've\n"
+	.string "earned this.$"
 
 MossdeepCity_StevensHouse_Text_ExplainDive: @ 8222A0E
 	.string "Steven: While you're using a Surfboard\n"

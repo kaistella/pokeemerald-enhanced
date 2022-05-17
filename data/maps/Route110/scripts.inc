@@ -777,7 +777,7 @@ Route110_Text_MayTakeThis: @ 81EFCF1
 	.string "This is from me!$"
 
 Route110_Text_MayExplainItemfinder: @ 81EFD58
-	.string "May: That's an ItemFinder.\p"
+	.string "May: That's an Item Finder.\p"
 	.string "Try it out. If there is an item that's\n"
 	.string "not visible, it emits a sound.\p"
 	.string "Okay, {PLAYER}{KUN}, let's meet again!\p"
@@ -803,7 +803,7 @@ Route110_Text_BrendanTakeThis: @ 81EFECD
 	.string "Here, take this.$"
 
 Route110_Text_BrendanExplainItemfinder: @ 81EFF1C
-	.string "Brendan: That's an ItemFinder.\p"
+	.string "Brendan: That's an Item Finder.\p"
 	.string "Use it to root around for items that\n"
 	.string "aren't visible.\p"
 	.string "If it senses something, it emits\n"

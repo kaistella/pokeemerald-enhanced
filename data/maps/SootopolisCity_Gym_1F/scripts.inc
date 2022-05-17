@@ -241,7 +241,7 @@ SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis: @ 82255BE
 	.string "the full obedience of all your Pokémon\l"
 	.string "to your every command.\p"
 	.string "The Rain Badge also allows the use\n"
-	.string "of the HM move Waterfall to scale\l"
+	.string "of the item Grapple Hook to scale\l"
 	.string "walls of cascading water.\p"
 	.string "And, so that you never forget the\n"
 	.string "battle we shared, take this…$"
